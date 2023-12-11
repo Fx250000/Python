@@ -134,9 +134,9 @@ print("Happy New Year!") """
 
 #nested loops
 
-Rows = int(input('How many rows: '))
+""" Rows = int(input('How many rows: '))
 Cols = int(input('how many columns: '))
-Symbols = input("Enter a symbol: ")
+Symbols = input("Enter a symbol: ") """
 
 #will draw a rectangle of symbols with rows as height and collums as lenght :4
 
@@ -148,4 +148,167 @@ Symbols = input("Enter a symbol: ")
 
 ################################################################
 
+#Loop Control Statements
 
+""" while True:
+    name = input("Enter your name: ")
+    if name != "": 
+        break
+
+phone_number = "53911534-0636"
+
+for i in phone_number:
+    if i == "-":
+        continue
+    print(i, end=" ") """
+"""     
+for i in range(1,21):
+    if i == 13:
+        pass
+    else:
+        print(i, end=" ") """
+        
+################################################################
+
+# Lists
+
+""" food_list = ["pizza", "ham", "hotdogs", "spam"]
+
+print(food_list[0])
+
+food_list[1] = "sushi"
+
+print(food_list[1])
+
+for i in food_list:
+    print(i)
+    
+food_list.append("Banana")
+food_list.remove("ham")
+food_list.pop()
+food_list.insert("Cake")
+food.sort()
+food_list.clear() """
+
+################################################################
+
+# 2D list
+
+""" drinks = ["coffee", "soda", "tea"]
+dinner = ['pizza', 'hamburger', 'hotdogs']
+deserts = ['cake', 'ice cream']
+
+food = [drinks, dinner, deserts]
+
+print(food[0] [0])
+print(food[1] [2]) """
+
+################################################################
+
+#tuples
+
+""" student = ('John', 21 , 'male')
+
+print(student.count("John"))
+print(student.index('John'))
+
+if "John" in student:
+        print("Student is enroled")
+else:
+    print("Student is not enrolled") """
+    
+################################################################
+
+#Sets
+
+""" utensils = {"fork", "spoon", "knife"}
+dishes = {"bow", "plate", "cup"}
+
+
+utensils.add("napkins")
+utensils.remove("fork")
+
+print(utensils.difference(dishes)) 
+
+dishes.update(utensils)
+
+dinner_table = utensils.union(dishes)
+
+for x in dishes:
+    print(x)
+   
+print(dinner_table) """
+
+
+################################################################
+
+# dictionaries
+
+""" Capitals = {"USA":"Washington DC", 
+            "India":"New Dehli",
+            "Brazil": "Brasilia"
+            }
+
+print(Capitals['India'])
+print(Capitals.get('Germany'))
+print(Capitals.values())
+print(Capitals.keys())
+print(Capitals.items())
+
+for key,value in Capitals.items():
+    print(key, value)
+    
+Capitals.pop('India')
+print(Capitals.items())
+
+Capitals.clear()
+print(Capitals.items())
+ """
+
+################################################################
+
+#index operator
+""" 
+name = "douglas Holz"
+
+if(name[0].islower()):
+    name = name.capitalize()
+
+print(name)
+
+firstName = name[:4].upper()
+lastName = name[8:].lower()
+lastCharacter = name[-1]
+
+print(firstName)
+print(lastName)
+print(lastCharacter) """
+
+################################################################
+
+#intro to Functions
+""" 
+def greeting(name, age):
+    print("Hello, " + name)
+    print("Your age is " + age)
+
+userName = input("Enter your username: ")
+userAge = input("Enter your age: ")
+
+greeting(userName, userAge) """
+
+https://www.britannica.com/plant/cinnamon
+
+# return statement
+
+""" def multiply(a, b):
+    return a * b
+
+data = multiply(6,8)
+
+print(data) """
+
+
+
+
+################################################################
