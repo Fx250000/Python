@@ -297,7 +297,7 @@ userAge = input("Enter your age: ")
 
 greeting(userName, userAge) """
 
-https://www.britannica.com/plant/cinnamon
+################################################################
 
 # return statement
 
@@ -308,7 +308,149 @@ data = multiply(6,8)
 
 print(data) """
 
+################################################################
 
+#Keyword Arguments
+
+""" def hello(first, middle, last):
+    print(f"Hello {first} {middle} {last}")
+          
+
+hello(middle = "Lucas", first = "Douglas", last = "Holz")  """
+
+################################################################
+
+#*args packs all the arguments in a single tuple
+
+""" def add(*args):
+    sum = 0
+    for i in args:
+        sum += i
+    return sum
+
+
+print(add(1,2,5,8,4,6,6)) """
+    
+################################################################
+
+#**kwargs packs all the keyword arguments into a dictionary
+
+""" def hello(**kwargs):
+    print("Hello", end= " ")
+    for key, value in kwargs.items():
+        print(value, end =' ')
+        
+hello(first="Douglas", last="Holz") """
+
+################################################################
+
+#exeption handling
+
+""" try:
+    numerator = input("Insert Numerator: ")
+    denominator = input("Insert Denominator: ")
+    result = int(numerator) / int(denominator)
+    print(result)
+except ZeroDivisionError as e:
+    print(e)
+    print("you cannot divide by zero.")
+except ValueError as e:
+    print(e)
+    print("Invalid Input, enter numbers only")
+except Exception as e:
+    print(e)
+    print("Something went wrong")
+else:
+    print("The result is", result)
+finally:
+    print('This will always execute!')
+     """
+
+################################################################
+
+#File detection
+
+""" path = 'C:\\Users\\dholz\\Desktop\\960'
+ 
+import os
+
+if os.path.exists(path):
+    if os.path.isfile(path):
+        print("The file exists")
+    elif os.path.isdir(path):
+        print("The folder exists")
+    else:
+        print("location exists")
+else:
+    print("File does not exist")  """
+    
+################################################################
+
+#file handling
+
+""" try: 
+    with open('C:\\Users\\dholz\\Desktop\\test.txt') as file:
+        print(file.read())
+except FileNotFoundError:
+    print("File not found") """
+
+################################################################
+
+#write a file
+""" 
+try:
+    with open('C:\\Users\\dholz\\Desktop\\test2.txt', 'w') as file:
+        file.write("Hello World!")
+except :
+    print("File not found") 
+
+with open('C:\\Users\\dholz\\Desktop\\test2.txt', 'a') as file:
+    file.write("\nThis is a new line") """
+    
+################################################################
+
+#copying files
+""" 
+import shutil
+
+shutil.copyfile('C:\\Users\\dholz\\Desktop\\test.txt', 'C:\\Users\\dholz\\Desktop\\test2.txt') """
 
 
 ################################################################
+
+#moving files
+""" 
+import os
+
+source = "C:\\Users\\dholz\\Desktop\\test2.txt"
+destination = "C:\\Users\\dholz\\Desktop\\test"
+
+try:
+    if os.path.exists(destination):
+        print("File already on folder")
+    else:
+        os.replace(source, destination)
+        print("File moved")
+except FileNotFoundError:
+    print("File not found") """
+
+################################################################
+
+#deleting files
+""" 
+import os
+
+path = "C:\\Users\\dholz\\Desktop\\test.txt"
+
+try:
+    if os.path.exists(path):
+        os.remove(path)
+        print("File deleted")
+    else:
+        print("File not found")
+except FileNotFoundError:
+    print("File not found")  """
+    
+
+################################################################
+
